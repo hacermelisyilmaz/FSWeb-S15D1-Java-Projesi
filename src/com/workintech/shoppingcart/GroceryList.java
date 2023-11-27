@@ -6,8 +6,7 @@ import java.util.Collections;
 public class GroceryList {
     private ArrayList<String> items;
 
-    public GroceryList(ArrayList<String> items) {
-        this.items = items;
+    public GroceryList() {
     }
 
     public void addItems(String items) {
