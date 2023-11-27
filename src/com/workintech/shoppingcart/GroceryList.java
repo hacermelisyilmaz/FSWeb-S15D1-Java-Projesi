@@ -44,4 +44,8 @@ public class GroceryList {
             System.out.println(item);
         }
     }
+
+    public ArrayList<String> getItems() {
+        return items;
+    }
 }
