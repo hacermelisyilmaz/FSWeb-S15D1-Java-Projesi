@@ -10,33 +10,19 @@ public class Main {
         System.out.println("0 for exit, 1 for adding products, 2 for removing products: ");
         int number = scanner.nextInt();
 
-        List<String> groceryList = new ArrayList<>();
+        GroceryList groceryList = new GroceryList();
 
-        if (number == 0) {
-
-            number = scanner.nextInt();
-        }
-        else if (number == 1) {
-            number = scanner.nextInt();
-        }
-        else if (number == 2) {
-            number = scanner.nextInt();
-        }
-        else {
-            System.out.println("Invalid number or character. Please enter 0, 1, or 2 only.");
-        }
-    }
-
-    public static ArrayList<String> addItems(ArrayList<String> groceryList, String itemStr) {
-        if (itemStr.contains(",")) {
-            String[] items = itemStr.split(",");
-            for (String item : items) {
-                groceryList.add(item.trim());
+        do {
+            if (number == 1) {
+                String products = scanner.next();
+                groceryList = addItems(groceryList, products);
+                number = scanner.nextInt();
+            } else if (number == 2) {
+                number = scanner.nextInt();
+            } else {
+                System.out.println("Invalid number or character. Please enter 0, 1, or 2 only.");
             }
         }
-        else {
-            groceryList.add(itemStr);
-        }
-        return groceryList;
+        while(number != 0);
     }
 }
