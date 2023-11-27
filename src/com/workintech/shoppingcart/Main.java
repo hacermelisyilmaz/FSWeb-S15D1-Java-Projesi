@@ -14,14 +14,20 @@ public class Main {
 
         do {
             if (number == 1) {
-                String products = scanner.next();
-                groceryList = addItems(groceryList, products);
+                System.out.println("List products you want to add to the list separating with commas: ");
+                String products = scanner.nextLine();
+                groceryList.addItems(products);
                 number = scanner.nextInt();
             } else if (number == 2) {
+                System.out.println("List products you want to remove from the list separating with commas: ");
+                String products = scanner.nextLine();
+                groceryList.removeItems(products);
                 number = scanner.nextInt();
             } else {
                 System.out.println("Invalid number or character. Please enter 0, 1, or 2 only.");
+                number = scanner.nextInt();
             }
+            groceryList.printSorted();
         }
         while(number != 0);
     }
