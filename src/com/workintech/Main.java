@@ -1,4 +1,6 @@
-package com.workintech.shoppingcart;
+package com.workintech;
+
+import com.workintech.shoppingcart.GroceryList;
 
 import java.util.ArrayList;
 import java.util.List;
