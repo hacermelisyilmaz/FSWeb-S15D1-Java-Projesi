@@ -16,7 +16,6 @@ public class GroceryList {
                 String trimmedItem = item.trim();
                 if (checkItemIsInList(trimmedItem)) System.out.println("Item " + item + " is already in the list.");
                 else this.items.add(trimmedItem);
-                printSorted();
             }
         }
         else {
