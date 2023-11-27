@@ -9,9 +9,9 @@ public class GroceryList {
     public GroceryList() {
     }
 
-    public void addItems(String items) {
-        if (items.contains(",")) {
-            String[] splitItems = items.split(",");
+    public void addItems(String products) {
+        if (products.contains(",")) {
+            String[] splitItems = products.split(",");
             for (String item : splitItems) {
                 String trimmedItem = item.trim();
                 if (checkItemIsInList(trimmedItem)) System.out.println("Item " + item + " is already in the list.");
@@ -19,7 +19,7 @@ public class GroceryList {
             }
         }
         else {
-            this.items.add(items);
+            this.items.add(products);
         }
     }
 
@@ -33,7 +33,8 @@ public class GroceryList {
     }
 
     public boolean checkItemIsInList(String item) {
-        return items.contains(item);
+        if (this.items == null) return true;
+        else return this.items.contains(item);
     }
 
     public void printSorted() {

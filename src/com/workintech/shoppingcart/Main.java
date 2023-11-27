@@ -13,6 +13,8 @@ public class Main {
 
         do {
             number = scanner.nextInt();
+            scanner.nextLine();
+
             if (number == 1) {
                 System.out.println("List products you want to add to the list separating with commas: ");
                 String products = scanner.nextLine();
@@ -27,5 +29,6 @@ public class Main {
             groceryList.printSorted();
         }
         while(number != 0);
+        scanner.close();
     }
 }
